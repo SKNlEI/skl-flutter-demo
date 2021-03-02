@@ -16,6 +16,12 @@ class _HomePagesState extends State<HomePages> {
             onPressed: () {
               Navigator.pushNamed(context, '/customScrollView');
             },
+          ),
+          OutlineButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/demoPage');
+            },
+            child: Text('demo page'),
           )
         ],
       ),

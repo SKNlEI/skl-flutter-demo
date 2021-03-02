@@ -56,14 +56,14 @@ class SklHttp {
    */
   Future<Response> post(url, data) async {
     print(CookieJar().loadForRequest(Uri.parse(url)));
-    print("post请求------------------------------");
-    print(data);
+    // print("post请求------------------------------");
+    // print(data);
     Response response;
     try {
       response = await dio.post(url, data: data);
-      print('post success---------${response.data}');
+      // print('post success---------${response.data}');
     } on DioError catch (e) {
-      print('post error---------$e');
+      // print('post error---------$e');
       formatError(e);
     }
     return response;

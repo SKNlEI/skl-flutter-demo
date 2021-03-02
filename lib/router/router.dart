@@ -4,13 +4,15 @@ import '../views/super-welfare/discount_packet.dart';
 import '../views/main_page/main_page.dart';
 import '../views/super-welfare/welfare_detail.dart';
 import '../views/custom_scroll_view/custom_scroll_view.dart';
+import '../views/demo_page/demo_page.dart';
 
 Map<String, WidgetBuilder> routes = {
   '/': (context, { arguments }) => MainPage(arguments: arguments),
   '/superWelfare': (context) => SuperWelfare(),
   '/discountPacket': (context) => DiscountPacket(),
   '/welfareDetail': (context, { arguments }) => WelfareDetail(arguments: arguments),
-  '/customScrollView': (context) => CustomScrollViewTestRoute()
+  '/customScrollView': (context) => CustomScrollViewTestRoute(),
+  '/demoPage': (context) => DemoPage()
 };
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -32,5 +34,6 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return route;
     }
   }
+  print('没有匹配到路由数据');
   return MaterialPageRoute(builder: (context) => MainPage());
 }
