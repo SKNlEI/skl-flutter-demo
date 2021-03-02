@@ -13,15 +13,16 @@ class _HomePagesState extends State<HomePages> {
         children: [
           OutlineButton(
             child: Text('点击跳转路由'),
-            onPressed: () {
-              Navigator.pushNamed(context, '/customScrollView');
-            },
+            onPressed: () {Navigator.pushNamed(context, '/customScrollView');},
           ),
           OutlineButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/demoPage');
-            },
+            onPressed: () {Navigator.pushNamed(context, '/demoPage');},
             child: Text('demo page'),
+          ),
+          OutlineButton(
+            // 没有匹配到跳转错误页面
+            onPressed: () {Navigator.pushNamed(context, '/de111moPage');},
+            child: Text('跳转错误页面'),
           )
         ],
       ),

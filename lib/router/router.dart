@@ -5,6 +5,7 @@ import '../views/main_page/main_page.dart';
 import '../views/super-welfare/welfare_detail.dart';
 import '../views/custom_scroll_view/custom_scroll_view.dart';
 import '../views/demo_page/demo_page.dart';
+import '../views/un_know_route/un_konw_route.dart';
 
 Map<String, WidgetBuilder> routes = {
   '/': (context, { arguments }) => MainPage(arguments: arguments),
@@ -35,5 +36,5 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     }
   }
   print('没有匹配到路由数据');
-  return MaterialPageRoute(builder: (context) => MainPage());
+  return MaterialPageRoute(builder: (context) => UnKnowRoute());
 }
