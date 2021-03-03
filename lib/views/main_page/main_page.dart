@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_skl/views/demo_page/demo_page.dart';
 import 'init_page_items.dart';
 
 class MainPage extends StatefulWidget {

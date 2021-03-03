@@ -12,7 +12,7 @@ class ToSeeModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style1 = TextStyle(color: Color(0xff6A2A14), fontWeight: FontWeight.w700, fontSize: 24);
-    final style2 = TextStyle(color: Colors.red, fontWeight: FontWeight.w800, fontSize: 34);
+    // final style2 = TextStyle(color: Colors.red, fontWeight: FontWeight.w800, fontSize: 34);
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
