@@ -6,6 +6,24 @@ class HomePages extends StatefulWidget {
 }
 
 class _HomePagesState extends State<HomePages> {
+
+  @override
+  void initState() {
+    super.initState();
+    print(context);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print(context);
+  }
+
+  @override
+  void deactivate() {
+    super.deactivate();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,6 +41,10 @@ class _HomePagesState extends State<HomePages> {
             // 没有匹配到跳转错误页面
             onPressed: () {Navigator.pushNamed(context, '/de111moPage');},
             child: Text('跳转错误页面'),
+          ),
+          RaisedButton(
+            onPressed: () {Navigator.pushNamed(context, '/tabBarDemo');},
+            child: Text('跳转tabBar 页面'),
           )
         ],
       ),

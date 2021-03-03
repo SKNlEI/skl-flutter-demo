@@ -6,6 +6,7 @@ import '../views/super-welfare/welfare_detail.dart';
 import '../views/custom_scroll_view/custom_scroll_view.dart';
 import '../views/demo_page/demo_page.dart';
 import '../views/un_know_route/un_konw_route.dart';
+import '../views/demo_page/tab_bar_demo.dart';
 
 Map<String, WidgetBuilder> routes = {
   '/': (context, { arguments }) => MainPage(arguments: arguments),
@@ -13,7 +14,8 @@ Map<String, WidgetBuilder> routes = {
   '/discountPacket': (context) => DiscountPacket(),
   '/welfareDetail': (context, { arguments }) => WelfareDetail(arguments: arguments),
   '/customScrollView': (context) => CustomScrollViewTestRoute(),
-  '/demoPage': (context) => DemoPage()
+  '/demoPage': (context) => DemoPage(),
+  '/tabBarDemo': (context) => TabBarDemo()
 };
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {

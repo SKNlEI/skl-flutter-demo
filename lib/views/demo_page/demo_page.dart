@@ -82,6 +82,7 @@ class _MyDemoPageState extends State<MyDemoPage> {
         DocumentDemo(),
         TextDemo(),
         ButtonDemo(),
+        SizedBox(height: 20),
         ImageDemo(),
         ContainerDemo(),
         ListViewDemo()
@@ -155,20 +156,23 @@ class DocumentDemo extends StatelessWidget {
   }
 }
 
-
+// Text  Text.rich
 class TextDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextStyle style1 = TextStyle(color: Colors.red, fontWeight: FontWeight.w600, fontSize: 20);
-
+    TextStyle style2 = TextStyle(fontWeight: FontWeight.w600, fontSize: 30, color: Colors.yellow);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('演示文字'),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: Text('演示文字', style: TextStyle(fontSize: 20)),
+        ),
         Text.rich(
           TextSpan(
             children: [
-              TextSpan(text: '请阅读'),
+              TextSpan(text: '请阅读', style: style2),
               TextSpan(text: '《隐私服务协议》', style: style1),
               TextSpan(text: '后再购买后再购买后再购买后再购买后再购买'),
             ]
@@ -180,20 +184,22 @@ class TextDemo extends StatelessWidget {
   }
 }
 
+// 按钮演示
 class ButtonDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
       spacing: 10,
+      runSpacing: 20,
       children: [
         RaisedButton(
           onPressed: () {},
-          color: Colors.pink,
+          // color: Colors.pink,
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [Icon(Icons.add), Text('增加')],
           ),
-          textColor: Colors.white,
+          // textColor: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         ),
         FlatButton(
@@ -210,6 +216,7 @@ class ButtonDemo extends StatelessWidget {
           onPressed: () {},
           textColor: Colors.red,
           child: Text('outline'),
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
           borderSide: BorderSide(color: Colors.red),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           textTheme: ButtonTextTheme.normal
@@ -217,12 +224,17 @@ class ButtonDemo extends StatelessWidget {
         FloatingActionButton(
           onPressed: () {},
           child: Icon(Icons.add, size: 40),
+        ),
+        TextButton(
+          onPressed: () {},
+          child: Text('TextButton')
         )
       ],
     );
   }
 }
 
+// 图片组件
 class ImageDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -247,10 +259,12 @@ class ImageDemo extends StatelessWidget {
   }
 }
 
+//
 class ContainerDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 20, bottom: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -281,7 +295,7 @@ class ContainerDemo extends StatelessWidget {
           Container(
             height: 60,
             width: 100,
-            margin: EdgeInsets.only(top: 20, bottom: 30, left: 30),
+            margin: EdgeInsets.only(top: 20, bottom: 60, left: 30),
             decoration: BoxDecoration(
               gradient: LinearGradient(colors:[Colors.red,Colors.orange[700]]), //背景渐变
               borderRadius: BorderRadius.circular(3.0), //3像素圆角

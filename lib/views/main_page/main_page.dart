@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_skl/views/demo_page/demo_page.dart';
 import 'init_page_items.dart';
 
 class MainPage extends StatefulWidget {
@@ -71,7 +72,11 @@ class _MainPageState extends State<MainPage> {
           currentIndex: _currentIndex,
           onTap: __handleChangeIndex
         ),
-      ),// This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {},
+      )
     );
   }
 }

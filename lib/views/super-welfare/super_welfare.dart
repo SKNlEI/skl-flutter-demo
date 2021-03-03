@@ -189,7 +189,7 @@ class CardShow extends StatelessWidget {
                 Text(subTitle)
               ],
             ),
-            v == '' || v == null ? Text('') : Positioned(
+            v.isEmpty || v == null ? Text('') : Positioned(
               right: -10,
               top: -12,
               child: DecoratedBox(
